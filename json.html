@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head id="impresshead">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers</title>
+</head>
+<body class="impress-not-supported" onload="startimpress();">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress"></div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+function startimpress() {
+  reqwest({url: './data/original.json', type: 'html', method: 'get', success: function (resp){ buildImpressHTML(resp); }});
+
+}
+
+function buildImpressHTML(json) {
+  var slidejson = JSON.parse(json);
+  var string = '';
+  
+  document.title = slidejson.title;
+  var head = document.getElementById('impresshead');
+  var newhead = '';
+  newhead += '<meta name="description" content="'+slidejson.description+'" />';
+  newhead += '<meta name="author" content="'+slidejson.author+'" />';
+  for(var i=0;i<slidejson.css.length;i++)
+    {
+      newhead += '<link href="'+slidejson.css[i]+'" rel="stylesheet" />';
+    }
+  newhead += '<link rel="shortcut icon" href="'+slidejson.favicon+'" />'
+  newhead += '<link rel="apple-touch-icon" href="'+slidejson.touchicon+'" />'
+  
+  head.innerHTML += newhead;
+  
+  for (var i=0;i<slidejson.slides.length;i++)
+    {
+      string += '<div';
+      if((slidejson.slides[i].id != '')){string += ' id="'+slidejson.slides[i].id+'"';}
+      if((slidejson.slides[i].class != '')){string += ' class="'+slidejson.slides[i].class+'"';}
+      if((slidejson.slides[i].position.x != '')){string += ' data-x="'+slidejson.slides[i].position.x+'"';}
+      if((slidejson.slides[i].position.y != '')){string += ' data-y="'+slidejson.slides[i].position.y+'"';}
+      if((slidejson.slides[i].position.z != '')){string += ' data-z="'+slidejson.slides[i].position.z+'"';}
+      if((slidejson.slides[i].scale != '')){string += ' data-scale="'+slidejson.slides[i].scale+'"';}
+      if((typeof slidejson.slides[i].rotate != 'undefined'))
+        {
+          if(typeof slidejson.slides[i].rotate[0] != 'undefined'){string += ' data-rotate="'+slidejson.slides[i].rotate[0]+'"';}
+          if(typeof slidejson.slides[i].rotate.x != 'undefined'){string += ' data-rotate-x="'+slidejson.slides[i].rotate.x+'"';}
+          if(typeof slidejson.slides[i].rotate.y != 'undefined'){string += ' data-rotate-y="'+slidejson.slides[i].rotate.y+'"';}
+        }
+      
+      string += '>'+slidejson.slides[i].content+'</div>'+"\n";
+    }
+  document.getElementById('impress').innerHTML = string;
+  window.setTimeout(impressinit, 500);
+}
+
+function impressinit() {
+  impress().init();
+}
+</script>
+<script src="reqwest/reqwest.min.js"></script>
+<script src="http://bartaz.github.com/impress.js/js/impress.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12565471-1']);
+  _gaq.push(['_setDomainName', 'waldherr.eu']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

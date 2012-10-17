@@ -20,6 +20,12 @@ It's an (un)fortunate coincidence that a Open/LibreOffice presentation tool is c
 VERSION HISTORY
 -----------------
 
+### 0.5.3.1 ([browse](http://github.com/simonwaldherr/impress.js/tree/0.5.3.1), [zip](http://github.com/simonwaldherr/impress.js/zipball/0.5.3.1), [tar](http://github.com/simonwaldherr/impress.js/tarball/0.5.3.1))
+
+#### FEATURE RELEASE
+
+added possibility, load presentation data as json via ajax
+
 ### 0.5.3 ([browse](http://github.com/bartaz/impress.js/tree/0.5.3), [zip](http://github.com/bartaz/impress.js/zipball/0.5.3), [tar](http://github.com/bartaz/impress.js/tarball/0.5.3))
 
 #### BUGFIX RELEASE
@@ -291,5 +297,11 @@ LICENSE
 Copyright 2011-2012 Bartek Szopka
 
 Released under the MIT and GPL Licenses.
+
+---
+
+this fork is maintained by Simon Waldherr
+
+all changes are also released under the MIT and GPL Licenses
 
 
