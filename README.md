@@ -11,9 +11,12 @@ transitions in modern browsers and inspired by the idea behind prezi.com.
 
 ### Demos of this fork
 
-[normal demo](http://cdn.simon.waldherr.eu/projects/impressjs/index.min.html) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
+[normal demo](http://cdn.simon.waldherr.eu/projects/impressjs/demo.min.html) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
 [json.php demo](http://cdn.simon.waldherr.eu/projects/impressjs/json.php) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
 [json.html demo](http://cdn.simon.waldherr.eu/projects/impressjs/json.html) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
+
+impress.js even works on the Apple iPad, give it a try!  
+<img src="http://cdn.simon.waldherr.eu/projects/impressjs/demo.png" />
 
 ### Other examples
 
