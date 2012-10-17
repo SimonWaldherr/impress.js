@@ -1,24 +1,28 @@
-impress.js
-============
+#impress.js
 
-It's a presentation framework based on the power of CSS3 transforms and 
+It's a presentation framework based on the power of CSS3 transforms and  
 transitions in modern browsers and inspired by the idea behind prezi.com.
 
-**WARNING**
+##EXAMPLES AND DEMOS
 
-impress.js may not help you if you have nothing interesting to say ;)
+### Official demo
+
+[impress.js demo](http://bartaz.github.com/impress.js) by [@bartaz](http://twitter.com/bartaz)
+
+### Demos of this fork
+
+[normal demo](http://cdn.simon.waldherr.eu/projects/impressjs/index.min.html) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
+[json.php demo](http://cdn.simon.waldherr.eu/projects/impressjs/json.php) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
+[json.html demo](http://cdn.simon.waldherr.eu/projects/impressjs/json.html) by [@simonwaldherr](http://twitter.com/simonwaldherr)  
+
+### Other examples
+
+More examples and demos can be found on [Examples and demos wiki page](http://github.com/bartaz/impress.js/wiki/Examples-and-demos).
+
+Feel free to add your own example presentations (or websites) there.
 
 
-ABOUT THE NAME
-----------------
-
-impress.js name in [courtesy of @skuzniak](http://twitter.com/skuzniak/status/143627215165333504).
-
-It's an (un)fortunate coincidence that a Open/LibreOffice presentation tool is called Impress ;)
-
-
-VERSION HISTORY
------------------
+##VERSION HISTORY
 
 ### 0.5.3.1 ([browse](http://github.com/simonwaldherr/impress.js/tree/0.5.3.1), [zip](http://github.com/simonwaldherr/impress.js/zipball/0.5.3.1), [tar](http://github.com/simonwaldherr/impress.js/tarball/0.5.3.1))
 
@@ -181,8 +185,7 @@ with simple fallback for non-supporting browsers.
 
 
 
-HOW TO USE IT
----------------
+##HOW TO USE IT
 
 [Use the source](http://github.com/bartaz/impress.js/blob/master/index.html), Luke ;)
 
@@ -196,23 +199,7 @@ Fortunately there are some guys on GitHub that got quite excited with the idea o
 editing tool for impress.js. Let's hope they will manage to do it.
 
 
-EXAMPLES AND DEMOS
---------------------
-
-### Official demo
-
-[impress.js demo](http://bartaz.github.com/impress.js) by [@bartaz](http://twitter.com/bartaz)
-
-### Other examples
-
-More examples and demos can be found on [Examples and demos wiki page](http://github.com/bartaz/impress.js/wiki/Examples-and-demos).
-
-Feel free to add your own example presentations (or websites) there.
-
-
-
-WANT TO CONTRIBUTE?
----------------------
+##WANT TO CONTRIBUTE?
 
 If you've found a bug or have a great idea for new feature let me know by [adding your suggestion]
 (http://github.com/bartaz/impress.js/issues/new) to [issues list](https://github.com/bartaz/impress.js/issues).
@@ -222,9 +209,7 @@ If you have fixed a bug or implemented a feature that you'd like to share, send 
 and my coding standards - so make sure you are open for discussion :)
 
 
-
-BROWSER SUPPORT
------------------
+##BROWSER SUPPORT
 
 ### TL;DR;
 
@@ -291,8 +276,7 @@ Also note that iOS supports `classList` and `dataset` APIs starting with version
 requires polyfills to work.
 
 
-LICENSE
----------
+##LICENSE
 
 Copyright 2011-2012 Bartek Szopka
 
@@ -303,5 +287,3 @@ Released under the MIT and GPL Licenses.
 this fork is maintained by Simon Waldherr
 
 all changes are also released under the MIT and GPL Licenses
-
-
