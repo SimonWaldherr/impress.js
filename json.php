@@ -1,7 +1,10 @@
 <?php
-$ImpressJSON  = file_get_contents('./data/original.json');
+//$ImpressJSON  = file_get_contents('./data/original.json.php');
+include ("./data/original.json.php");
+
+$ImpressJSON  = $json;
 $ImpressArray = json_decode($ImpressJSON, 1);
-//print_r($ImpressArray);
+
 ?><!doctype html>
 <html lang="<?php echo $ImpressArray['language']; ?>">
 <head>

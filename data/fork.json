@@ -1,0 +1,164 @@
+{
+  "author": "Simon Waldherr",
+  "css": [
+    "http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic",
+    "./css/impress-demo.css"
+  ],
+  "description": "impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.",
+  "favicon": "./favicon.png",
+  "language": "en",
+  "slides": [
+    {
+      "class": "step slide",
+      "content": "<q>This presentation is about my impress.js fork</q>",
+      "id": "fork",
+      "position": {
+        "x": 100,
+        "y": 0,
+        "z": 0
+      },
+      "rotate": {
+        "x": 0,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>impress.js is now able to load presentations as json file via ajax</q>",
+      "id": "json",
+      "position": {
+        "x": 100,
+        "y": 1200,
+        "z": -500
+      },
+      "rotate": {
+        "x": -45,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>in the next days, the following features will come:</q>",
+      "id": "soon",
+      "position": {
+        "x": 100,
+        "y": 1700,
+        "z": -1700
+      },
+      "rotate": {
+        "x": -90,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>icomoon integration</q>",
+      "id": "icon",
+      "position": {
+        "x": 100,
+        "y": 1200,
+        "z": -2900
+      },
+      "rotate": {
+        "x": -135,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>a sync mode</q>",
+      "id": "sync",
+      "position": {
+        "x": 100,
+        "y": 0,
+        "z": -3400
+      },
+      "rotate": {
+        "x": -180,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>a compress tool</q>",
+      "id": "compress",
+      "position": {
+        "x": 100,
+        "y": -1200,
+        "z": -2900
+      },
+      "rotate": {
+        "x": -225,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>more examples</q>",
+      "id": "examples",
+      "position": {
+        "x": 100,
+        "y": -1700,
+        "z": -1700
+      },
+      "rotate": {
+        "x": -270,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step slide",
+      "content": "<q>and last, but not least, an editor</q>",
+      "id": "editor",
+      "position": {
+        "x": 100,
+        "y": -1200,
+        "z": -500
+      },
+      "rotate": {
+        "x": -315,
+        "y": 0
+      },
+      "scale": 2
+    },
+    {
+      "class": "step",
+      "content": "",
+      "id": "fly",
+      "position": {
+        "x": -1500,
+        "y": 500,
+        "z": -1700
+      },
+      "rotate": {
+        "x": -360,
+        "y": 90
+      },
+      "scale": 5
+    },
+    {
+      "class": "step slide",
+      "content": "<q>Thank you for watching!</q>",
+      "id": "thanks",
+      "position": {
+        "x": -2500,
+        "y": 0,
+        "z": -1700
+      },
+      "rotate": {
+        "x": -360,
+        "y": 90
+      },
+      "scale": 1
+    }
+  ],
+  "title": "impress.js | HTML5+CSS3 presentation tool",
+  "touchicon": "./apple-touch-icon.png"
+}

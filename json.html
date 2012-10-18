@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers</title>
+    <link href="css/before-load.css" rel="stylesheet" />
 </head>
-<body class="impress-not-supported" onload="startimpress();">
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+<body class="impress-not-supported">
+<div id="load-message" class="loading-message">
+  <p>This demo load the presentation-data as json-file via ajax. Please click on one of the examples to load the presentation</p><ul>
+    <li><a href="#" onclick="startimpress('original.json')">the original demo</a></li>
+    <li><a href="#" onclick="startimpress('original.json.php')">php generated demo</a></li>
+    <li><a href="#" onclick="startimpress('fork.json')">about this fork</a></li>
+  </ul>
+</div>
+<div id="fb-message" class="fallback-message">
+    <div id="fb-hidden-message" style="display:none;">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
 </div>
 
 <div id="impress"></div>
@@ -21,8 +31,10 @@
 if ("ontouchstart" in document.documentElement) { 
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
-function startimpress() {
-  reqwest({url: './data/original.json', type: 'html', method: 'get', success: function (resp){ buildImpressHTML(resp); }});
+function startimpress(name) {
+  document.getElementById('load-message').style.display = 'none';
+  document.getElementById('fb-message').innerHTML = document.getElementById('fb-hidden-message').innerHTML;
+  reqwest({url: './data/'+name, type: 'html', method: 'get', success: function (resp){ buildImpressHTML(resp); }});
 
 }
 
